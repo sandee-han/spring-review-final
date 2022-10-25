@@ -8,14 +8,16 @@ import java.util.Map;
 public class UserDao {
 
     private ConnectionMaker connectionMaker;
+    private Connection c;
+    private User user;
 
-    public UserDao() {
-        connectionMaker = new DConnectionMaker();
+    public UserDao(ConnectionMaker connectionMaker) {
+        this.connectionMaker = connectionMaker;
     }
 
     public void add(User user) {
         try {
-            Connection c = connectionMaker.makeConnection();
+            this.c = connectionMaker.makeConnection();
             // Query문 작성
             PreparedStatement pstmt = c.prepareStatement("INSERT INTO users(id, name, password) VALUES(?,?,?);");
             pstmt.setString(1, user.getId());
@@ -25,7 +27,7 @@ public class UserDao {
             // Query문 실행
             pstmt.executeUpdate();
             pstmt.close();
-            c.close();
+            this.c.close();
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -36,7 +38,7 @@ public class UserDao {
 
     public User findById(String id) {
         try {
-            Connection c = connectionMaker.makeConnection();
+            this.c = connectionMaker.makeConnection();
 
             // Query문 작성
             PreparedStatement pstmt = c.prepareStatement("SELECT * FROM users WHERE id = ?");
@@ -45,12 +47,12 @@ public class UserDao {
             // Query문 실행
             ResultSet rs = pstmt.executeQuery();
             rs.next();
-            User user = new User(rs.getString("id"), rs.getString("name"),
+            this.user = new User(rs.getString("id"), rs.getString("name"),
                     rs.getString("password"));
 
             rs.close();
             pstmt.close();
-            c.close();
+            this.c.close();
 
             return user;
 
@@ -61,10 +63,4 @@ public class UserDao {
         }
     }
 
-    public static void main(String[] args) {
-        UserDao userDao = new UserDao();
-//        userDao.add();
-        User user = userDao.findById("6");
-        System.out.println(user.getName());
-    }
 }

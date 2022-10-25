@@ -5,8 +5,10 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,11 +16,9 @@ import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(SpringExtension.class)
 class UserDaoTest {
 
-    @Autowired
-    ApplicationContext context;
+    ApplicationContext context = new AnnotationConfigApplicationContext(DaoFactory.class);
 
-    UserDao userDao = new UserDao();
-
+    UserDao dao = context.getBean("userDao", UserDao.class);
     User user1;
     User user2;
     User user3;
@@ -29,11 +29,11 @@ class UserDaoTest {
         this.user2 = new User("2", "udon", "12412");
         this.user3 = new User("3", "pasta", "1q2w3e");
 
-        String id = "2";
-        userDao.add(new User(id, "olivia", "loona"));
-        User user = userDao.findById(id);
+        String id = "6";
+        dao.add(new User(id, "kimlip", "loona"));
+        User user = dao.findById(id);
 
-        assertEquals("olivia", user.getName());
+        assertEquals("kimlip", user.getName());
         assertEquals("loona", user.getPassword());
     }
 }
