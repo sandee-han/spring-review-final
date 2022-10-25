@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="354cd61e-a82f-4fb1-aad9-f0f90c0ea7a0" name="Changes" comment="daoFactory, @Configuration, @Bean, AppicationContext">
+    <list default="true" id="354cd61e-a82f-4fb1-aad9-f0f90c0ea7a0" name="Changes" comment="@BeforeEach 적용 후 user 생성">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/likelion/dao/ConnectionMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/likelion/dao/ConnectionMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/likelion/dao/DConnectionMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/likelion/dao/DConnectionMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/likelion/dao/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/likelion/dao/DaoFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/likelion/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/likelion/dao/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/likelion/dao/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/likelion/dao/UserDaoTest.java" afterDir="false" />
     </list>
@@ -184,7 +180,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666661825590</updated>
-      <workItem from="1666661827627" duration="5994000" />
+      <workItem from="1666661827627" duration="6768000" />
     </task>
     <task id="LOCAL-00001" summary="UserDao Connection 분리">
       <created>1666664014809</created>
@@ -214,7 +210,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666665888155</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="deleteAll, getCount method 추가 / test 추가">
+      <created>1666671865373</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666671865373</updated>
+    </task>
+    <task id="LOCAL-00006" summary="@BeforeEach 적용 후 user 생성">
+      <created>1666672002611</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666672002611</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +246,9 @@
     <MESSAGE value="ConnectionMaker class 분리" />
     <MESSAGE value="addAndGet Test, interface" />
     <MESSAGE value="daoFactory, @Configuration, @Bean, AppicationContext" />
-    <option name="LAST_COMMIT_MESSAGE" value="daoFactory, @Configuration, @Bean, AppicationContext" />
+    <MESSAGE value="deleteAll, getCount method 추가 / test 추가" />
+    <MESSAGE value="@BeforeEach 적용 후 user 생성" />
+    <option name="LAST_COMMIT_MESSAGE" value="@BeforeEach 적용 후 user 생성" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

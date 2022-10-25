@@ -36,11 +36,11 @@ class UserDaoTest {
     @Test
     @DisplayName("추가랑 확인이 되나용가리")
     void addAndGet() throws SQLException {
-        String id = "7";
-        dao.add(new User(id, "chuu", "loona"));
+        String id = "8";
+        dao.add(new User(id, "haseul", "loona"));
 
         User user = dao.findById(id);
-        assertEquals("chuu", user.getName());
+        assertEquals("haseul", user.getName());
         assertEquals("loona", user.getPassword());
     }
 
