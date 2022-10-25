@@ -74,7 +74,7 @@
       <recent name="com.likelion.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.UserDaoTest.count">
+  <component name="RunManager" selected="Gradle.UserDaoTest.addAndGet">
     <configuration name="UserDaoTest.addAndGet" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="env">

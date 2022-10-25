@@ -1,6 +1,7 @@
 package com.likelion.dao;
 
 import com.likelion.domain.User;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -24,22 +25,22 @@ class UserDaoTest {
     User user2;
     User user3;
 
-    @Test
-    @DisplayName("추가랑 확인이 되나용가리")
-    void addAndGet() throws SQLException {
+    @BeforeEach
+    void before() {
         this.user1 = new User("1", "ramen", "11213");
         this.user2 = new User("2", "udon", "12412");
         this.user3 = new User("3", "pasta", "1q2w3e");
+    }
 
-        String id = "6";
-        dao.add(new User(id, "kimlip", "loona"));
 
-        dao.add(user1);
-        assertEquals(1, dao.getCount());
+    @Test
+    @DisplayName("추가랑 확인이 되나용가리")
+    void addAndGet() throws SQLException {
+        String id = "7";
+        dao.add(new User(id, "chuu", "loona"));
 
         User user = dao.findById(id);
-
-        assertEquals("kimlip", user.getName());
+        assertEquals("chuu", user.getName());
         assertEquals("loona", user.getPassword());
     }
 
@@ -52,10 +53,6 @@ class UserDaoTest {
     @Test
     @DisplayName("Count 테스트")
     void count() throws SQLException {
-        this.user1 = new User("1", "ramen", "11213");
-        this.user2 = new User("2", "udon", "12412");
-        this.user3 = new User("3", "pasta", "1q2w3e");
-
         dao.deleteAll();
         assertEquals(0, dao.getCount());
 
