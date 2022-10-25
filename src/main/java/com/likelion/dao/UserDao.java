@@ -15,11 +15,15 @@ public class UserDao {
 
     private User user;
 
+    private PreparedStatement makeStatement(Connection c) throws SQLException {
+        PreparedStatement pstmt;
+        pstmt = c.prepareStatement("DELETE FROM USERS");
+        return pstmt;
+    }
 
     public void add(User user) {
         Connection c = null;
         PreparedStatement pstmt = null;
-
         try {
             c = dataSource.getConnection();
             pstmt = c.prepareStatement("INSERT INTO users(id, name, password) VALUES(?,?,?);");
@@ -89,7 +93,8 @@ public class UserDao {
 
         try {
             c  = dataSource.getConnection();
-            pstmt = c.prepareStatement("DELETE FROM users");
+            StatementStrategy strategy = new DeleteAllStatement();
+            pstmt = strategy.makePreparedStatement(c);
             pstmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);

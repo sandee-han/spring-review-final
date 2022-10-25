@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="354cd61e-a82f-4fb1-aad9-f0f90c0ea7a0" name="Changes" comment="@BeforeEach 적용 후 user 생성">
+    <list default="true" id="354cd61e-a82f-4fb1-aad9-f0f90c0ea7a0" name="Changes" comment="user == null Exception 처리">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/likelion/dao/DeleteAllStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/likelion/dao/StatementStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/likelion/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/likelion/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/likelion/dao/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/likelion/dao/UserDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +181,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666661825590</updated>
-      <workItem from="1666661827627" duration="6768000" />
+      <workItem from="1666661827627" duration="8136000" />
     </task>
     <task id="LOCAL-00001" summary="UserDao Connection 분리">
       <created>1666664014809</created>
@@ -224,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666672002611</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="user == null Exception 처리">
+      <created>1666672620617</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666672620617</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +256,8 @@
     <MESSAGE value="daoFactory, @Configuration, @Bean, AppicationContext" />
     <MESSAGE value="deleteAll, getCount method 추가 / test 추가" />
     <MESSAGE value="@BeforeEach 적용 후 user 생성" />
-    <option name="LAST_COMMIT_MESSAGE" value="@BeforeEach 적용 후 user 생성" />
+    <MESSAGE value="user == null Exception 처리" />
+    <option name="LAST_COMMIT_MESSAGE" value="user == null Exception 처리" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
