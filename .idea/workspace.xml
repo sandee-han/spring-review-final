@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="354cd61e-a82f-4fb1-aad9-f0f90c0ea7a0" name="Changes" comment="addAndGet Test, interface">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/likelion/dao/DaoFactory.java" afterDir="false" />
+    <list default="true" id="354cd61e-a82f-4fb1-aad9-f0f90c0ea7a0" name="Changes" comment="daoFactory, @Configuration, @Bean, AppicationContext">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/likelion/dao/ConnectionMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/likelion/dao/ConnectionMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/likelion/dao/DConnectionMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/likelion/dao/DConnectionMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/likelion/dao/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/likelion/dao/DaoFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/likelion/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/likelion/dao/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/likelion/dao/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/likelion/dao/UserDaoTest.java" afterDir="false" />
     </list>
@@ -71,7 +74,7 @@
       <recent name="com.likelion.dao" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.UserDaoTest.count">
     <configuration name="UserDaoTest.addAndGet" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="env">
@@ -102,6 +105,71 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="UserDaoTest.count" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="env">
+          <map>
+            <entry key="DB_HOST" value="jdbc:mysql://localhost:3306/bbs" />
+            <entry key="DB_PASSWORD" value="runwild" />
+            <entry key="DB_USER" value="root" />
+          </map>
+        </option>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.likelion.dao.UserDaoTest.count&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserDaoTest.delete" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="env">
+          <map>
+            <entry key="DB_HOST" value="jdbc:mysql://localhost:3306/bbs" />
+            <entry key="DB_PASSWORD" value="runwild" />
+            <entry key="DB_USER" value="root" />
+          </map>
+        </option>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.likelion.dao.UserDaoTest.delete&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.UserDaoTest.count" />
+      <item itemvalue="Gradle.UserDaoTest.delete" />
+      <item itemvalue="Gradle.UserDaoTest.addAndGet" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.UserDaoTest.addAndGet" />
@@ -116,7 +184,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666661825590</updated>
-      <workItem from="1666661827627" duration="3783000" />
+      <workItem from="1666661827627" duration="5994000" />
     </task>
     <task id="LOCAL-00001" summary="UserDao Connection 분리">
       <created>1666664014809</created>
@@ -139,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666665023209</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="daoFactory, @Configuration, @Bean, AppicationContext">
+      <created>1666665888155</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666665888155</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +235,8 @@
     <MESSAGE value="UserDao Connection 분리" />
     <MESSAGE value="ConnectionMaker class 분리" />
     <MESSAGE value="addAndGet Test, interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="addAndGet Test, interface" />
+    <MESSAGE value="daoFactory, @Configuration, @Bean, AppicationContext" />
+    <option name="LAST_COMMIT_MESSAGE" value="daoFactory, @Configuration, @Bean, AppicationContext" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class DConnectionMaker implements ConnectionMaker {
     @Override
-    public Connection makeConnection() throws ClassNotFoundException, SQLException {
+    public Connection getConnection() throws ClassNotFoundException, SQLException {
         Map<String, String> env = System.getenv();
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection c = DriverManager.getConnection(env.get("DB_HOST"),
