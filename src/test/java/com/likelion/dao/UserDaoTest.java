@@ -12,6 +12,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -62,6 +63,16 @@ class UserDaoTest {
         assertEquals(2, dao.getCount());
         dao.add(user3);
         assertEquals(3, dao.getCount());
+    }
+
+    @Test
+    public void getAll() throws SQLException {
+        dao.deleteAll();
+
+        dao.add(user1);
+        List<User> users1 = dao.getAll();
+
+
     }
 
 }
