@@ -29,14 +29,11 @@ class UserDaoTest {
         this.user2 = new User("2", "udon", "12412");
         this.user3 = new User("3", "pasta", "1q2w3e");
 
-        if(userDao == null){
-            System.out.println("null나옴");
-        }
-        String id = "29";
-        userDao.add(new User(id, "EternityHwan", "1234"));
+        String id = "2";
+        userDao.add(new User(id, "olivia", "loona"));
         User user = userDao.findById(id);
 
-        assertEquals("EternityHwan", user.getName());
-        assertEquals("1234", user.getPassword());
+        assertEquals("olivia", user.getName());
+        assertEquals("loona", user.getPassword());
     }
 }

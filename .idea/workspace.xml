@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="354cd61e-a82f-4fb1-aad9-f0f90c0ea7a0" name="Changes" comment="UserDao Connection 분리">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/likelion/dao/SimpleConnectionMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="354cd61e-a82f-4fb1-aad9-f0f90c0ea7a0" name="Changes" comment="ConnectionMaker class 분리">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/likelion/dao/ConnectionMaker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/likelion/dao/DConnectionMaker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/likelion/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/likelion/dao/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/likelion/dao/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/likelion/dao/UserDaoTest.java" afterDir="false" />
     </list>
@@ -34,6 +34,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -115,7 +116,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666661825590</updated>
-      <workItem from="1666661827627" duration="2755000" />
+      <workItem from="1666661827627" duration="3155000" />
     </task>
     <task id="LOCAL-00001" summary="UserDao Connection 분리">
       <created>1666664014809</created>
@@ -124,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666664014809</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ConnectionMaker class 분리">
+      <created>1666664809071</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666664809071</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,7 +151,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="UserDao Connection 분리" />
-    <option name="LAST_COMMIT_MESSAGE" value="UserDao Connection 분리" />
+    <MESSAGE value="ConnectionMaker class 분리" />
+    <option name="LAST_COMMIT_MESSAGE" value="ConnectionMaker class 분리" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -7,15 +7,15 @@ import java.util.Map;
 
 public class UserDao {
 
-    private SimpleConnectionMaker simpleConnectionMaker;
+    private ConnectionMaker connectionMaker;
 
     public UserDao() {
-        this.simpleConnectionMaker = new SimpleConnectionMaker();
+        connectionMaker = new DConnectionMaker();
     }
 
     public void add(User user) {
         try {
-            Connection c = simpleConnectionMaker.getConnection();
+            Connection c = connectionMaker.makeConnection();
             // Query문 작성
             PreparedStatement pstmt = c.prepareStatement("INSERT INTO users(id, name, password) VALUES(?,?,?);");
             pstmt.setString(1, user.getId());
@@ -36,7 +36,7 @@ public class UserDao {
 
     public User findById(String id) {
         try {
-            Connection c = simpleConnectionMaker.getConnection();
+            Connection c = connectionMaker.makeConnection();
 
             // Query문 작성
             PreparedStatement pstmt = c.prepareStatement("SELECT * FROM users WHERE id = ?");
