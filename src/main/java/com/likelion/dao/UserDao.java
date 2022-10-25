@@ -7,27 +7,25 @@ import java.util.Map;
 
 public class UserDao {
 
-    private Connection getConnection() throws ClassNotFoundException, SQLException {
-        Map<String, String> env = System.getenv();
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection c = DriverManager.getConnection(env.get("DB_HOST"),
-                env.get("DB_USER"), env.get("DB_PASSWORD"));
-        return c;
+    private SimpleConnectionMaker simpleConnectionMaker;
+
+    public UserDao() {
+        this.simpleConnectionMaker = new SimpleConnectionMaker();
     }
 
     public void add(User user) {
         try {
+            Connection c = simpleConnectionMaker.getConnection();
             // Query문 작성
-            PreparedStatement pstmt = getConnection().prepareStatement("INSERT INTO users(id, name, password) VALUES(?,?,?);");
+            PreparedStatement pstmt = c.prepareStatement("INSERT INTO users(id, name, password) VALUES(?,?,?);");
             pstmt.setString(1, user.getId());
             pstmt.setString(2, user.getName());
             pstmt.setString(3, user.getPassword());
 
             // Query문 실행
             pstmt.executeUpdate();
-
             pstmt.close();
-            getConnection().close();
+            c.close();
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -38,8 +36,10 @@ public class UserDao {
 
     public User findById(String id) {
         try {
+            Connection c = simpleConnectionMaker.getConnection();
+
             // Query문 작성
-            PreparedStatement pstmt = getConnection().prepareStatement("SELECT * FROM users WHERE id = ?");
+            PreparedStatement pstmt = c.prepareStatement("SELECT * FROM users WHERE id = ?");
             pstmt.setString(1, id);
 
             // Query문 실행
@@ -50,7 +50,7 @@ public class UserDao {
 
             rs.close();
             pstmt.close();
-            getConnection().close();
+            c.close();
 
             return user;
 

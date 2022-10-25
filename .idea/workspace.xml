@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="354cd61e-a82f-4fb1-aad9-f0f90c0ea7a0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/likelion/dao/UserDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="354cd61e-a82f-4fb1-aad9-f0f90c0ea7a0" name="Changes" comment="UserDao Connection 분리">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/likelion/dao/SimpleConnectionMaker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/likelion/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/likelion/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/likelion/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/likelion/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/likelion/dao/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/likelion/dao/UserDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -118,8 +115,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666661825590</updated>
-      <workItem from="1666661827627" duration="2014000" />
+      <workItem from="1666661827627" duration="2755000" />
     </task>
+    <task id="LOCAL-00001" summary="UserDao Connection 분리">
+      <created>1666664014809</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666664014809</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,5 +140,19 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="UserDao Connection 분리" />
+    <option name="LAST_COMMIT_MESSAGE" value="UserDao Connection 분리" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
